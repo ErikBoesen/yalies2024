@@ -1,13 +1,17 @@
 body {
     color: white;
     background: #2432DB;
+    font-family: 'Arial', 'Helvetica';
 }
 main {
-    font-family:
+    font-family: 'Comic Sans';
 }
 p {
 
 }
 p.minor {
     font-size: 14px;
+}
+.marquee-box {
+    background:
 }
