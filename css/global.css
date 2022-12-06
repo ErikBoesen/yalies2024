@@ -13,5 +13,7 @@ p.minor {
     font-size: 14px;
 }
 .marquee-box {
-    background:
+    background: white;
+    width: 20px;
+    margin: 0 auto;
 }
