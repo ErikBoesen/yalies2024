@@ -1,1 +1,1 @@
-alert('I don\'t know what was in the popup lol');
+window.open('https://gayfuel.ytmnd.com/');
