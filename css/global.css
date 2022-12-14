@@ -76,3 +76,16 @@ a {
 footer {
     text-align: right;
 }
+
+/* Page specific styling */
+
+#people {
+}
+.person {
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+}
+.person img {
+    width: 100px;
+}
