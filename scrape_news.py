@@ -1,13 +1,19 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://news.yale.edu/search?sort=created&order=desc&search_api_views_fulltext="
+HOST = 'https://news.yale.edu'
+url = HOST + '/search?sort=created&order=desc&search_api_views_fulltext='
 soup = BeautifulSoup(requests.get(url).text, "html.parser").find('div', {'id': 'block-system-main'})
 # TODO: protect against exact link index being changed
-a = soup.find_all('div', {'class': 'views-row'})
-href = a.get("href")
-# If no results are found, send recommendation
-if "/search?" in href:
-    print(f"No results found. Did you mean '{a.text}'?")
-    # TODO: Use recursion to get that result automatically?
-print("https://news.yale.edu" + href)
+rows = soup.find_all('div', {'class': 'views-row'})
+for row in rows:
+    link = row.find('a')
+    url = HOST + link['href']
+    title = link.text
+    date = row.find('div', {'class': 'date'}).text
+    teaser = row.find('div', {'class': 'teaser'}).text
+    print(url)
+    print(title)
+    print(date)
+    print(teaser)
+    print()
