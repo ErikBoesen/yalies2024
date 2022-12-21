@@ -1,3 +1,24 @@
 ---
 layout: base
 ---
+<article>
+    <p>To be added to the list, please submit your private information to the cloud where anyone can see it. Don’t worry, if you think about it, it’s probably already out there, so you didn’t have a reasonable expectation of privacy anyway!</p>
+    <br>
+    <form>
+        <label for="fname">Name:</label><br>
+        <input type="text" id="fname"><br>
+        <label for="birthdate">Birthday:</label><br>
+        <input type="text" id="birthdate"><br>
+        <label for="ssn">If your SSN was a 9-digit phone number, what would it be?</label><br>
+        <input type="text" id="ssn"><br>
+        <label for="maiden">Mother's Maiden Name</label><br>
+        <input type="text" id="maiden"><br>
+        <script>
+            function redirect() {
+                location.href = '//www.identitytheft.gov/';
+                return false;
+            }
+        </script>
+        <input type="submit" value="Submit To Our Secure Server" onclick="return redirect();">
+    </form>
+</article>
