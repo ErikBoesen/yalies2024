@@ -1,3 +1,10 @@
 ---
 layout: base
 ---
+<article>
+    {% for article in site.data.articles %}
+    <a href="{{ article.url }}">{{ article.title }}</a>
+    <div class="date">{{ article.date }}</div>
+    <div class="teaser">{{ article.teaser }}</div>
+    {% endfor %}
+</article>
