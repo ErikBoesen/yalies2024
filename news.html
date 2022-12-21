@@ -2,9 +2,13 @@
 layout: base
 ---
 <article>
+    <h2>Yale News</h2>
+    <p>Latest headlines scraped from news.yale.edu. See more news <a href="https://news.yale.edu">here!<a></p>
     {% for article in site.data.articles %}
-    <a href="{{ article.url }}">{{ article.title }}</a>
-    <div class="date">{{ article.date }}</div>
-    <div class="teaser">{{ article.teaser }}</div>
+    <div class="article">
+        <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+        <div class="date">{{ article.date }}</div>
+        <div class="teaser">{{ article.teaser }}</div>
+    </div>
     {% endfor %}
 </article>

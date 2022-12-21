@@ -91,5 +91,9 @@ footer {
 }
 .center {
     text-align: center;
-font-family: 'Arial', 'Helvetica';
+    font-family: 'Arial', 'Helvetica';
+}
+
+.article {
+    margin-bottom: 10px;
 }
